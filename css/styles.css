@@ -1,0 +1,19 @@
+/*.product{
+  display: inline-block;
+  width: 25%;
+  text-align: center;
+}
+.product  .product-img .details,
+.product  .product-img .summary
+{display: none;}
+  
+
+
+ .product  h2{color: #7494b7; font-size: 36px}
+.product   img{border:1px solid #e2e2e2}
+ .product  .title, .product  .author{ font-size: 14px}
+ .product  .price{font-weight: 800;}
+
+
+
+*/

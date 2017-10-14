@@ -1,0 +1,73 @@
+@import url( 'https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700');
+@import url('https://fonts.googleapis.com/css?family=Allura');
+@import url('https://fonts.googleapis.com/css?family=Alex+Brush');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300');
+@import url('https://fonts.googleapis.com/css?family=Cantata+One');
+@import url('https://fonts.googleapis.com/css?family=Unna');
+
+
+
+@import "reset";
+@import "variables";
+@import "products";
+
+
+@import "header";
+@import "footer";
+.rainbow-bar{
+    background-image: url('../img/trim_pattern.jpg');
+    height: 7px;}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background: url('../img/dot_pattern.jpg');
+}
+
+a{
+  color:$darkestgray;
+  text-decoration: none;
+  &:hover{color:$lightgray;
+  }
+}
+
+.clearfix:after {
+    clear: both;
+    content: ".";
+    display: block;
+    height: 0;
+    line-height: 0;
+    visibility: hidden;
+}
+
+#app{
+  background-color: white;
+  width:1027px;
+  margin:0 auto;
+  padding:0px}
+#wrapper{
+  background-color: white;
+  border: 2px solid lightgrey;
+  width:945px;
+  margin:0 auto;
+  padding:0px 40px}
+
+h2,h3{
+  color:$lightblue;
+  font-family: $title;
+  text-shadow: 1px 1px 1px #fff;
+}
+.shadow{
+  box-shadow: 0px 1px 10px gray;
+  border-bottom: 1px solid transparent;
+  width: 90%;
+  margin: 0px auto;
+  z-index: -3;}
+
+
+
+.about-area{
+  border-top: 2px lightgray solid;
+  padding: 20px 0px;
+  .signiture{
+  }
+}
