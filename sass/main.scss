@@ -5,15 +5,13 @@
 @import url('https://fonts.googleapis.com/css?family=Cantata+One');
 @import url('https://fonts.googleapis.com/css?family=Unna');
 
-
-
 @import "reset";
 @import "variables";
 @import "products";
 
-
 @import "header";
 @import "footer";
+
 .rainbow-bar{
     background-image: url('../img/trim_pattern.jpg');
     height: 7px;}
@@ -21,7 +19,18 @@
 body {
   font-family: 'Roboto', sans-serif;
   background: url('../img/dot_pattern.jpg');
+  color:#565656;
+  >.rainbow-bar{
+    border-bottom: 2px solid lightgrey;
+  }
 }
+
+p{
+  margin: 14px 0px;
+  font-family: $title;
+  font-size: 16px;
+}
+
 
 a{
   color:$darkestgray;
@@ -41,15 +50,26 @@ a{
 
 #app{
   background-color: white;
-  width:1027px;
+  @include respond-to(small){
+    width: auto;
+  }
+   width:1027px;
   margin:0 auto;
-  padding:0px}
+  padding:0px;
+}
 #wrapper{
   background-color: white;
   border: 2px solid lightgrey;
-  width:945px;
+  border-top: none;
+  @include respond-to(small){
+    width: auto;
+      padding:0px 10px;
+  }
+   width:945px;
   margin:0 auto;
-  padding:0px 40px}
+  padding:0px 40px;
+
+}
 
 h2,h3{
   color:$lightblue;
@@ -68,6 +88,12 @@ h2,h3{
 .about-area{
   border-top: 2px lightgray solid;
   padding: 20px 0px;
-  .signiture{
+  a{
+    color: black;
+    font-weight: 400;
+    text-decoration: underline;
+    &:hover{
+      color:$darkestgray;
+    }
   }
 }

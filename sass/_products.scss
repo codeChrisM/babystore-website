@@ -1,7 +1,18 @@
 .featured-area{
-    padding: 10px 0px;
+    padding: 20px 0px;
     display: flex;
     justify-content: space-between;
+    @include respond-to(small){
+      display: block;
+      width: 100%;
+    }
+
+.featured-block{
+  p{
+    font-family:$signiture;
+    font-size: 23px;
+  }
+}
 }
 .product{
   font-family: $title;
@@ -11,11 +22,17 @@
   margin: 0;
   padding: 0;
   vertical-align: middle;
+  @include respond-to(small){
+    padding: 20px 0px;
+    display: block;
+    width: 100%;
+  };
   &:first-child{
   margin-top:20px;
   font-size:24px;
   font-family: $cursive;
-  p{margin: 24px auto;}
+  p{margin: 24px auto;
+  }
 }
   .summary{
     position: absolute;
@@ -30,19 +47,36 @@
     background-color: $lightblue;
     -webkit-transition: opacity 2s; /* Safari */
     transition: opacity 2s;
+    @include respond-to(small){
+      display: none;
+    }
     &:hover {
         opacity: 1;
         -webkit-transition: opacity 1s; /* Safari */
         transition: opacity 1s;
     }
   }
-  .product-img{position: relative;}
+  .product-img{
+    position: relative;
+    border:1px solid #e2e2e2;
+    @include respond-to(small){
+      border: none;
+    }
+    img{
+      @include respond-to(small){
+        border:1px solid #e2e2e2;
+        width: 100%;
+      }
+    }
+  }
   .product-img .details,
-  .product  .product-img .summary
- 	 {display: none;}
+  .product  .product-img .summary{display: none;}
   h2{color: #7494b7; font-size: 36px}
-  img{border:1px solid #e2e2e2}
+
+  .title{ margin-top: 5px}
   .title, .author{ font-size: 14px}
-  .price{font-weight: 800;}
+  .price{font-weight: 800; font-size: 15px; margin-top: 5px;
+  }
+
 
 }

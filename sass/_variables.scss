@@ -1,12 +1,26 @@
 $cursive: 'Allura', cursive;
 $signiture: 'Alex Brush', cursive;
-$title: 'Unna', serif;
+$title: 'Georgia';
 $lightgray: #eee;
 $darkgray: #f5f5f5;
-$darkestgray: #b0b0b0;
+$darkestgray: #565656;;
 $offwhite: #FFFEFF;
 $pink: #ffeaea;
 $lightblue:#7494b7;
+$breakpoints: (
+    "small": 767px,
+    "large": 768px
+);
+@mixin respond-to($break) {
+  @if $break == large {
+  @media (max-width: 1420px) { @content; }
+  }
+  @else if $break == small {
+  @media (max-width: 767px) { @content; }
+  } @else {
+  @media screen and  ($break) { @content; }
+  }
+}
 
 .btn{
 background: #ffffff; /* Old browsers */
