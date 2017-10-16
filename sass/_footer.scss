@@ -20,20 +20,34 @@ footer{
   }
   .footer-nav{
     @include respond-to(small){
-    &:nth-child(1) h4:after,&:nth-child(2) h4:after,&:nth-child(3) h4:after{
-      content: "+";
-      display: inline-block;
-    -webkit-transform: rotate(0deg);
-    -moz-transform: rotate(0deg);
-    -o-transform: rotate(0deg);
-    -ms-transform: rotate(0deg);
-    transform: rotate(0deg);
-      position: absolute;
-      margin-right: 5%;
-      right: 0;
+      a.mobile-only{
+        -webkit-transform: rotate(0deg);
+        -moz-transform: rotate(0deg);
+        -o-transform: rotate(0deg);
+        -ms-transform: rotate(0deg);
+        transform: rotate(0deg);
+        display: inline-block;
+        position: absolute;
+        top: 18px;
+        right: 5%;
+        font-size: 25px;
+        color:$lightblue;
+      }
+      ul.active a.mobile-only{
+        -webkit-transform: rotate(35deg);
+        -moz-transform: rotate(35deg);
+        -o-transform: rotate(35deg);
+        -ms-transform: rotate(35deg);
+        transform: rotate(35deg);
+        display: inline-block;
+        position: absolute;
+        top: 18px;
+        right: 5%;
+        font-size: 25px;
+        color:$darkestgray;
+      }
     }
   }
-}
   h4{
     color:$lightblue;
     font-size:27px;
@@ -49,7 +63,7 @@ footer{
       color:$darkestgray;
     }
   }
-  ul {
+  ul.expandable {
     line-height: 24px;
     font-size: 13px;
     text-transform: uppercase;
@@ -58,11 +72,26 @@ footer{
       padding: 0px;
     }
     @include respond-to(small){
-      li{
+      &.active li{
         padding: 10px 0px;
         text-align:center;
         border-top: 1px solid #d3d3d3;
         background-color: #f2f2f2;
+        display: block;
+        transition: font-size .25s;
+        transition: padding .5s;
+        height: auto;
+        font-size: 20px;
+      }
+      li{
+        height: 0px;
+        padding: 0px 0px;
+        font-size: 0px;
+        transition: font-size .25s;
+        transition: padding .5s;
+
+
+
       }
     }
     .footer-nav ul{
@@ -72,14 +101,14 @@ footer{
 
   .footer-nav:nth-child(4) ul li,.footer-nav:nth-child(5) ul li{
     @include respond-to(small){
-        padding: 10px 0px;
-        text-align:left;
-        border-top: none;
-        background-color: #fff;
-      }
+      padding: 10px 0px;
+      text-align:left;
+      border-top: none;
+      background-color: #fff;
+    }
   }
   form{
-      @include respond-to(small){
+    @include respond-to(small){
       margin: auto 0;
       input{
         width: 69%;
@@ -93,9 +122,12 @@ footer{
 
 
 
+
+
   .footer-nav {
     @include respond-to(small){
       position: relative;
+
     }
     vertical-align: top;
     .social-media{
@@ -107,7 +139,7 @@ footer{
     }
     p{
       @include respond-to(small){
-      max-width: 100%;
+        max-width: 100%;
       }
       max-width: 267px;
     }
@@ -119,6 +151,9 @@ footer{
   color:lightgray;
   P{margin-top: 0px}
   a{color:lightgray; vertical-align: top;}
+  ul{
+    @include respond-to(small){text-align: center}
+  }
   li{
     display: inline-block;
   }

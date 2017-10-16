@@ -25,6 +25,16 @@ body {
   }
 }
 
+.mobile-only{
+  display: none;
+  @include respond-to(small){
+    display: inline-block;
+  }
+}
+
+
+
+
 p{
   margin: 14px 0px;
   font-family: $title;

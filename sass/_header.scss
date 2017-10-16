@@ -147,6 +147,8 @@ input::placeholder{color:#000}
 
 
 /*-------------Navigation Bar-------------*/
+
+
 .mobile-user-session-area{
   display: none;
   @include respond-to(small){
@@ -169,14 +171,18 @@ nav{
   font-size: 13px;
   font-weight: 200;
   @include respond-to(small){
-      width: 80%;
+    width: 80%;
     display: block;
     position: absolute;
     z-index: 3;
     border: 1px solid gray;
-    right: 0;
+    right: -82%;
+    transition: right .5s;
     top: 40px;
-
+    &.active{
+      right:0;
+      transition: right .5s;
+    }
   }
   .dropbtn,a {
     background-color: #fff;

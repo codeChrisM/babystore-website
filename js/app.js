@@ -3,12 +3,15 @@ $(document).ready(function(){
     autoplay: true,
     autoplaySpeed:3000
   });
+
+
+  $( '#mobile-menu' ).click(function() {
+    $( 'nav' ).toggleClass( "active" );
+  });
+
+$( ".mobile-only" ).click(function() {
+  $(this).parent().toggleClass( "active" );
 });
 
-$( ".accordian" ).click(function() {
-  $( this ).toggleClass( "active" );
-});
 
-$( "p" ).click(function() {
-  $( this ).toggleClass( "highlight" );
 });
