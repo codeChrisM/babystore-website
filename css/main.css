@@ -199,11 +199,11 @@ table {
       padding: 20px 0px;
       display: block;
       width: 100%; } }
-  .product:first-child {
+  .product:first-child:not(.related) {
     margin-top: 20px;
     font-size: 24px;
     font-family: "Allura", cursive; }
-    .product:first-child p {
+    .product:first-child:not(.related) p {
       margin: 24px auto; }
   .product .summary {
     position: absolute;
@@ -251,6 +251,22 @@ table {
     font-weight: 800;
     font-size: 15px;
     margin-top: 5px; }
+
+body.product-page .related {
+  font-size: 25px;
+  text-align: center; }
+
+.two-column {
+  display: flex; }
+  @media (max-width: 767px) {
+    .two-column {
+      display: block; } }
+  .two-column .description {
+    padding: 5%; }
+  .two-column .about-area {
+    border-top: none; }
+    .two-column .about-area .product {
+      width: auto; }
 
 /*-------------Header Top Bar-------------*/
 .header-top {
@@ -530,16 +546,17 @@ footer {
     color: #000; }
     footer a:hover {
       color: #565656; }
-  footer ul.expandable {
+  footer ul, footer ul.expandable {
     line-height: 24px;
     font-size: 13px;
-    text-transform: uppercase; }
+    text-transform: uppercase;
+    text-align: left; }
     @media (max-width: 767px) {
-      footer ul.expandable {
+      footer ul, footer ul.expandable {
         font-size: 20px;
         padding: 0px; } }
     @media (max-width: 767px) {
-      footer ul.expandable.active li {
+      footer ul.active li, footer ul.expandable.active li {
         padding: 10px 0px;
         text-align: center;
         border-top: 1px solid #d3d3d3;
@@ -549,13 +566,13 @@ footer {
         transition: padding .5s;
         height: auto;
         font-size: 20px; }
-      footer ul.expandable li {
+      footer ul li, footer ul.expandable li {
         height: 0px;
         padding: 0px 0px;
         font-size: 0px;
         transition: font-size .25s;
         transition: padding .5s; } }
-    footer ul.expandable .footer-nav ul {
+    footer ul .footer-nav ul, footer ul.expandable .footer-nav ul {
       display: inline-block; }
   @media (max-width: 767px) {
     footer .footer-nav:nth-child(4) ul li, footer .footer-nav:nth-child(5) ul li {
@@ -588,15 +605,19 @@ footer {
 
 .left-bottom-footer {
   line-height: 31px;
-  color: lightgray; }
+  color: lightgray;
+  font-size: 15px; }
   .left-bottom-footer P {
-    margin-top: 0px; }
+    margin-top: 0px;
+    text-align: left; }
   .left-bottom-footer a {
     color: lightgray;
     vertical-align: top; }
-  @media (max-width: 767px) {
-    .left-bottom-footer ul {
-      text-align: center; } }
+  .left-bottom-footer ul {
+    text-align: left; }
+    @media (max-width: 767px) {
+      .left-bottom-footer ul {
+        text-align: center; } }
   .left-bottom-footer li {
     display: inline-block; }
 

@@ -63,10 +63,11 @@ footer{
       color:$darkestgray;
     }
   }
-  ul.expandable {
+  ul, ul.expandable {
     line-height: 24px;
     font-size: 13px;
     text-transform: uppercase;
+    text-align: left;
     @include respond-to(small){
       font-size: 20px;
       padding: 0px;
@@ -89,9 +90,6 @@ footer{
         font-size: 0px;
         transition: font-size .25s;
         transition: padding .5s;
-
-
-
       }
     }
     .footer-nav ul{
@@ -149,9 +147,11 @@ footer{
 .left-bottom-footer{
   line-height: 31px;
   color:lightgray;
-  P{margin-top: 0px}
+  font-size:15px;
+  P{margin-top: 0px; text-align: left}
   a{color:lightgray; vertical-align: top;}
   ul{
+    text-align: left;
     @include respond-to(small){text-align: center}
   }
   li{

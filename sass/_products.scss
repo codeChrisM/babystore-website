@@ -27,7 +27,7 @@
     display: block;
     width: 100%;
   };
-  &:first-child{
+  &:first-child:not(.related){
   margin-top:20px;
   font-size:24px;
   font-family: $cursive;
@@ -77,6 +77,29 @@
   .title, .author{ font-size: 14px}
   .price{font-weight: 800; font-size: 15px; margin-top: 5px;
   }
+}
 
 
+
+
+//-------------PRODUCT PAGE-------------------
+body.product-page{
+  .related{
+    font-size: 25px;
+    text-align: center;
+  }
+}
+
+.two-column{
+  @include respond-to(small){
+    display: block;
+  }
+  display: flex;
+  .description{ padding: 5%}
+  .about-area{
+    border-top: none;
+    .product{
+      width: auto
+    }
+  }
 }
